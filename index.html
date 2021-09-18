@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- getbootstrap.com  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- fontawesome.com -->
+    <link rel="stylesheet" href="./css/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <!-- aos library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- personal css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <title>Osmon's Portfolio Website</title>
+
+    <style>
+        .scroll {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: red;
+
+            border-radius: 50%;
+            font-size: 20px;
+            color: yellow;
+            opacity: 0;
+
+        }
+
+        .scroll-top {
+            padding: 5px 10px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: red;
+            border-radius: 50%;
+            font-size: 20px;
+            color: yellow;
+            opacity: 1;
+
+        }
+
+        .scroll-top:hover {
+            padding: 6px 12px;
+            cursor: pointer;
+            box-shadow: 0 0 8px 0 rgb(0, 255, 106);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- scroll top button -->
+    <div class="scroll" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Loader -->
+    <div class="loading">
+        <div class="main">
+            <div class="dot">
+                <div class="dot2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" id="navId">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Portfolio</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button onclick="navBack()" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home page -->
+    <section class="home text-sm-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="titles">
+                        <p style="font-family: 'Itim', cursive;">Welcome to my website</p>
+                        <h3 style="font-family: 'Itim', cursive;">Mening ismim Osmon</h3>
+                        <div class="button">
+                            <a href="#">Let's go</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- Services page -->
+    <section class="services text-sm-center">
+        <div class="container">
+
+            <h2 id="services" style="font-family: 'Fredericka the Great', cursive;"
+                class="text-center pb-3 display-5 text-uppercase">
+                Services</h2>
+            <p class="text-center pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellendus
+                beatae,
+                veritatis alias culpa
+                ex molestiae quo nostrum provident facere.</p>
+            <div class="row mt-4">
+
+                <div data-aos="fade-right" data-aos-duration="2000" class="col-md-4">
+
+                    <div class="card">
+
+                        <div class="card-header">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Title</h3>
+                            <p class="card-text">Content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
+                                impedit laudantium laborum perspiciatis fugit eveniet.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="3000" class="col-md-4">
+
+                    <div class="card">
+
+                        <div class="card-header">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Title</h3>
+                            <p class="card-text">Content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
+                                impedit laudantium laborum perspiciatis fugit eveniet.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div data-aos="fade-left" data-aos-duration="2000" class="col-md-4">
+
+                    <div class="card">
+
+                        <div class="card-header">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Title</h3>
+                            <p class="card-text">Content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae
+                                impedit laudantium laborum perspiciatis fugit eveniet.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Portfolio page -->
+    <section class="portfolio text-sm-center">
+        <div class="container">
+            <h2 id="portfolio" style="font-family: 'Fredericka the Great', cursive;"
+                class="text-center text-uppercase pb-4">Portfolio
+            </h2>
+            <p class="text-center mb-5 mb-sm-3 mx-5 mx-sm-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam cumque
+                velit
+                fugit
+                iusto minus doloremque consequatur nulla, accusamus earum porro blanditiis voluptas corrupti? Quia nam
+                optio minus! Delectus, velit tempora.</p>
+            <div class="row">
+
+                <div data-aos="zoom-out-right" data-aos-easing="linear" data-aos-duration="1500" class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="overlay">
+                                <h4 class="text-center pt-5 mb-2">Progects</h4>
+                                <p class="mx-3">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <img src="./assets/img/kompyuter.jpg" alt="kompyuter">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500" class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="overlay">
+                                <h4 class="text-center pt-5 mb-2">Progects</h4>
+                                <p class="mx-3">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <img src="./assets/img/kompyuter.jpg" alt="kompyuter">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div data-aos="zoom-out-left" data-aos-easing="linear" data-aos-duration="1500" class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="overlay">
+                                <h4 class="text-center pt-5 mb-2">Progects</h4>
+                                <p class="mx-3">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <img src="./assets/img/kompyuter.jpg" alt="kompyuter">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div data-aos="zoom-out-right" data-aos-easing="linear" data-aos-duration="1500" class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="overlay">
+                                <h4 class="text-center pt-5 mb-2">Progects</h4>
+                                <p class="mx-3">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <img src="./assets/img/kompyuter.jpg" alt="kompyuter">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500" class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="overlay">
+                                <h4 class="text-center pt-5 mb-2">Progects</h4>
+                                <p class="mx-3">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <img src="./assets/img/kompyuter.jpg" alt="kompyuter">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div data-aos="zoom-out-left" data-aos-easing="linear" data-aos-duration="1500" class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="overlay">
+                                <h4 class="text-center pt-5 mb-2">Progects</h4>
+                                <p class="mx-3">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <img src="./assets/img/kompyuter.jpg" alt="kompyuter">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About page -->
+    <section class="about">
+        <div class="container">
+            <h2 id="about" style="font-family: 'Fredericka the Great', cursive;"
+                class="text-center text-uppercase pt-5">About Me
+            </h2>
+            <p class="text-center py-3"><i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, eum.</i></p>
+            <div class="row">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    class="col-md-6 m-0 mt-2">
+                    <img class="img-fluid mx-5" src="./assets/img/osmon.jpg" alt="personal image">
+                </div>
+                <div class="col-md-6 m-0  text-center">
+                    <h3 data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000"
+                        style="font-family: 'Itim', cursive;" class="text-dark py-4 mx-3">Hello! My name is Osmon</h3>
+                    <p data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000"
+                        style="font-family: 'Itim', cursive;" class="text-dark text-justify">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Quasi
+                        rem
+                        repellendus nemo voluptates
+                        ex, perferendis culpa accusamus incidunt quaerat sint provident aspernatur et eveniet, excepturi
+                        tempora sit distinctio. Cupiditate sit dolorum et, ut quibusdam dolorem quam earum hic
+                        consectetur quae provident tenetur optio, in commodi. Recusandae placeat voluptas neque quidem.
+                    </p>
+
+                    <ul class="my-contact mt-5">
+                        <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000"
+                            class="text-dark"> <i class="fas fa-user"></i>
+                            <strong>Full Name:</strong> Toshev Osmon
+                        </li>
+                        <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500"
+                            class="text-dark"><i class="fas fa-calendar-alt"></i>
+                            <strong>Birthday:</strong> 25.02.1996
+                        </li>
+                        <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000"
+                            class="text-dark"><i class="fas fa-at"></i>
+                            <strong>Email:</strong> toshev.osmon@gmail.com
+                        </li>
+                        <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2500"
+                            class="text-dark"> <i class="fas fa-map-marker-alt"></i>
+                            <strong>Address:</strong> Uchtepa / Toshkent / Uzbekistan
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact   -->
+
+
+    <!-- footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row text-white text-center pt-2">
+                <div class="col-md-4">
+                    <p> Copyright &copy;
+                        <script>
+                            document.write(new Date().toLocaleDateString());
+                        </script> Website
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <a href="https://web.telegram.org/#/im?p=@ToshevOsmon" target="_blank">
+                            <i class="iconka fab fa-telegram fa-2x mr-2 text-light"></i></a></span>
+                    <span>
+                        <a href="#"><i class="iconka fab fa-facebook fa-2x mr-2 text-light"></i></a></span>
+                    <span>
+                        <a href="#"><i class="iconka fab fa-instagram fa-2x mr-2 text-light"></i></a> </span>
+                    <span>
+                        <a href="https://github.com/ToshevOsmon" target="_blank"><i
+                                class="iconka fab fa-github fa-2x text-light"></i></a></span>
+                </div>
+                <div class="col-md-4">
+                    <span>Website create by Toshev Osmon</span>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    </script>
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>

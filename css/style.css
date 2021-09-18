@@ -1,0 +1,1275 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* scroll bar */
+
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: red;
+}
+
+/*== loader ==  */
+.loading{
+    margin: 0 auto;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation: fadeOut 3s linear;
+    animation-fill-mode: forwards;
+
+}
+.loading .main{
+  margin: 15rem auto;
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    border: 5px solid #000;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+.dot2{
+    border: 5px solid yellow;
+    border-radius: 50px;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    margin: -5px -5px;
+    border-left-color:transparent ;
+    border-top-color: transparent;
+    animation: loader 1s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut{
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+/* === home page === */
+.home{
+    background: url("../assets/img/kom2.jpg") no-repeat;
+    background-size: cover;
+    height: 40rem;
+}
+.navbar{
+    background-color: transparent !important;
+    transition: .5s linear;
+}
+.fixeded{
+    background-color: rgba(17, 17, 17,0.9) !important;
+    padding: 0;
+}
+.navbar-brand{
+    color: yellow !important;
+    margin: 10px 30px;
+font-size: 1.7rem;
+}
+.navbar-nav{
+   margin-left: 45rem; 
+}
+
+
+.nav-item .nav-link{
+    color: white !important;
+    font-size: 1.2rem;
+    margin-right: 30px;
+    padding: 10px;
+    transition: .3s ease all;
+}
+.nav-item .nav-link:hover{
+    color: yellow !important;
+}
+
+/* Home */
+
+.col-md-6{
+    color: white !important;
+    display: block;
+    margin: 25% auto;
+}
+.titles p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.titles h3{
+    text-align: center;
+font-size: 3rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    font-size: 1.7rem;
+    color: black;
+    text-decoration: none;
+    background-color:white;
+    transition:  .5s ease all;
+}
+.button a:hover{
+    background-color: yellow;
+}
+
+/* services */
+
+.services{
+    padding: 50px 0;
+}
+
+.card{
+    border:none ;
+    border-radius: 0;
+}
+.card-header{
+    background-color: transparent !important;
+    text-align: center;
+    border-bottom: none;
+}
+.card-header i{
+    font-size: 4rem;
+    background-color: yellow;
+    padding: 1.5rem;
+    color: black;
+    border-radius: 50%;
+
+}
+.card-body{
+    text-align: center;
+}
+/* === Portfolio === */
+
+.portfolio{
+    padding: 5rem 0;
+}
+.portfolio .card{
+    position: relative;
+}
+.portfolio .card-header img {
+    width: 100%
+}
+.portfolio .card-header{
+    padding: 0;
+}
+.card-header .overlay{
+    background-color: rgba(255, 255, 0, .8);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease all;
+}
+.card-header .overlay:hover{
+opacity: 1;
+}
+
+/* === About === */
+
+.about img{
+    width: 400px;
+    height: 500px;
+}
+.my-contact{
+    text-align: left;
+}
+.my-contact li{
+    list-style-type: none;
+}
+
+/* === Footer === */
+.footer{
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+}
+.iconka{
+transition: .3s ease;
+
+}
+.iconka:hover{
+    color: yellow !important;
+    font-size: 30px;
+
+}
+
+/* ==== RESPONCIVE ====*/
+
+
+/* 1300px */
+
+@media screen and (max-width:1300px){
+
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar-brand{
+        margin: 5px 15px;
+    font-size: 2rem;
+    }
+    .navbar-nav{
+        margin: 0 25rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        padding: 5px 10px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+
+.home{
+    height: 50rem;
+}
+
+.col-md-6{
+    margin: 36% auto;
+}
+.titles p{
+    font-size: 1.6rem;
+}
+.titles h3{
+font-size: 2.6rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 2rem;
+}
+
+/* services */
+
+.services{
+    padding: 45px 0;
+}
+.services h2{
+    font-size: 2.5rem;
+}
+.services p{
+    font-size: 22px;
+    margin: 0 5px;
+}
+.services .card-header i{
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 50%;
+}
+.services .card-body p{
+    font-size: 14px;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio h2{
+    font-size: 2.5rem;
+}
+.portfolio p{
+    font-size: 18px;
+    margin: 10px !important;
+}
+.portfolio .col-md-4{
+    margin-top: 20px !important;
+}
+.card-header img {
+width: 100%;
+
+}
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+.card-header .overlay h4{
+    font-size: 1.2rem;
+}
+.overlay p{
+    font-size: 14px;
+}
+
+/* About */
+.about{
+    text-align: center;
+}
+.about h2{
+font-size: 2.5rem;
+}
+.about img{
+    width: 380px;
+    height: 460px;
+ margin: 0 auto !important;
+}
+.about p{
+    margin: 0 20px !important;
+    font-size: 18px;
+}
+.about h3{
+    font-size: 2rem;
+}
+.about ul li{
+    font-size: 20px;
+}
+
+.my-contact{
+    text-align: left;
+}
+  }
+
+/* 1024px */
+
+@media screen and (max-width:1024px){
+
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar-brand{
+        margin: 5px 15px;
+    font-size: 2rem;
+    }
+    .navbar-nav{
+        margin: 0 25rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        padding: 5px 10px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+
+.home{
+    height: 50rem;
+}
+
+.col-md-6{
+    margin: 36% auto;
+}
+.titles p{
+    font-size: 1.6rem;
+}
+.titles h3{
+font-size: 2.6rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 2rem;
+}
+
+/* services */
+
+.services{
+    padding: 45px 0;
+}
+.services h2{
+    font-size: 2.5rem;
+}
+.services p{
+    font-size: 22px;
+    margin: 0 5px;
+}
+.services .card-header i{
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 50%;
+}
+.services .card-body p{
+    font-size: 14px;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio h2{
+    font-size: 2.5rem;
+}
+.portfolio p{
+    font-size: 18px;
+    margin: 10px !important;
+}
+.portfolio .col-md-4{
+    margin-top: 20px !important;
+}
+.card-header img {
+width: 100%;
+
+}
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+.card-header .overlay h4{
+    font-size: 1.2rem;
+}
+.overlay p{
+    font-size: 14px;
+}
+
+/* About */
+.about{
+    text-align: center;
+}
+.about h2{
+font-size: 2.5rem;
+}
+.about img{
+    width: 380px;
+    height: 460px;
+ margin: 0 auto !important;
+}
+.about p{
+    margin: 0 20px !important;
+    font-size: 18px;
+}
+.about h3{
+    font-size: 2rem;
+}
+.about ul li{
+    font-size: 20px;
+}
+
+.my-contact{
+    text-align: left;
+}
+  }
+
+/* 960px */
+@media screen and (max-width:960px){
+
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar-brand{
+        margin: 5px 15px;
+    font-size: 2rem;
+    }
+    .navbar-nav{
+        margin: 0 12rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        padding: 5px 10px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+
+.home{
+    height: 50rem;
+}
+
+.col-md-6{
+    margin: 38% auto;
+}
+.titles p{
+    font-size: 1.4rem;
+}
+.titles h3{
+font-size: 2.2rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 1.8rem;
+}
+
+/* services */
+
+.services{
+    padding: 45px 0;
+}
+.services h2{
+    font-size: 2.5rem;
+}
+.services p{
+    font-size: 20px;
+    margin: 0 5px;
+}
+.services .card-header i{
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 50%;
+}
+.services .card-body p{
+    font-size: 14px;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio h2{
+    font-size: 2.5rem;
+}
+.portfolio p{
+    font-size: 18px;
+    margin: 10px !important;
+}
+.portfolio .col-md-4{
+    margin-top: 20px !important;
+}
+.card-header img {
+width: 100%;
+
+}
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+.portfolio .overlay h4{
+    font-size: 1.2rem;
+    margin: 0 !important;
+}
+.overlay p{
+    font-size: 12px;
+}
+
+/* About */
+.about{
+    text-align: center;
+}
+.about h2{
+font-size: 2.5rem;
+}
+.about img{
+    width: 300px;
+    height: 360px;
+ margin: 0 auto !important;
+}
+.about p i{
+    font-size: 18px;
+}
+.about p{
+    margin: 0 20px !important;
+    font-size: 16px;
+}
+.about h3{
+    font-size: 1.5rem;
+}
+.about ul li{
+    font-size: 18px;
+}
+
+  }
+
+/*  767px */
+@media screen and (max-width:767px){
+
+
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar-brand{
+        margin: 5px 15px;
+    font-size: 2rem;
+    }
+    .navbar-nav{
+        margin: 0 20rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1.8rem;
+        margin-right: 10px;
+        padding: 10px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+
+.home{
+    height: 45rem;
+}
+
+.col-md-6{
+    margin: 45% auto;
+}
+.titles p{
+    font-size: 2rem;
+}
+.titles h3{
+font-size: 3rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 2rem;
+}
+
+/* services */
+
+.services{
+    padding: 45px 0;
+}
+.services p{
+    font-size: 20px;
+    margin: 0 5px;
+}
+.card-header i{
+    font-size: 6rem;
+    padding: 4rem;
+    border-radius: 50%;
+}
+.services .card-body p{
+    font-size: 16px;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio p{
+    font-size: 20px;
+    margin: 10px !important;
+}
+.portfolio .col-md-4{
+    margin-top: 20px !important;
+}
+.card-header img {
+   width: 100%;
+
+}
+.portfolio .overlay h4{
+    font-size: 26px;
+}
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+.overlay p{
+    font-size: 18px;
+}
+
+/* About */
+.about p i{
+    font-size: 18px;
+}
+.about img{
+    width: 380px;
+    height: 460px;
+ margin: 0 auto !important;
+}
+.about p{
+    margin: 0 20px !important;
+    font-size: 18px;
+}
+.about h3{
+    font-size: 26px;
+}
+.about ul li{
+    font-size: 20px;
+}
+
+.my-contact{
+    text-align: left;
+}
+  }
+
+ /*  * 501px *  */
+ @media screen and (max-width:501px){
+
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar-brand{
+        margin: 5px 10px;
+    font-size: 1.7rem;
+    }
+    .navbar-nav{
+        margin: 0 12rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        padding: 8px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+
+.home{
+    height: 40rem;
+}
+
+.col-md-6{
+    margin: 50% auto;
+}
+.titles p{
+    font-size: 1.5rem;
+}
+.titles h3{
+font-size: 2.5rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
+
+/* services */
+
+.services{
+    padding: 35px 0;
+}
+.services h2{
+    font-size: 2.5rem;
+}
+.services p{
+    font-size: 16px;
+    margin: 0 10px;
+}
+.card-header i{
+    font-size: 5rem;
+    padding: 4rem;
+    border-radius: 50%;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio h2{
+    font-size: 2.5rem;
+}
+.portfolio p{
+    font-size: 16px;
+    margin: 20px !important;
+}
+.portfolio .col-md-4{
+    margin-top: 20px !important;
+}
+.card-header img {
+   width: 100%;
+
+}
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+.card-header .overlay h4{
+    font-size: 2.5rem;
+}
+.overlay p{
+    font-size: 16px;
+}
+
+/* About */
+.about h2{
+font-size: 2.5rem;
+    text-align: center;
+}
+
+.about img{
+    width: 300px;
+    height: 360px;
+ margin: 0 auto !important;
+}
+.about p{
+    font-size: 18px;
+    margin: 0 10px !important;
+}
+.about h3{
+    font-size: 34px;
+}
+.about ul li{
+    font-size: 18px;
+}
+  }
+
+/*  420 px */
+@media screen and (max-width:420px){
+
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar-brand{
+        margin: 5px 10px;
+    font-size: 1.7rem;
+    }
+    .navbar-nav{
+        margin: 0 9rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        padding: 8px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+
+.home{
+    height: 45rem;
+}
+
+.col-md-6{
+    margin: 70% auto;
+}
+.titles p{
+    font-size: 1.5rem;
+}
+.titles h3{
+font-size: 2.5rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
+
+/* services */
+
+.services{
+    padding: 35px 0;
+}
+.services h2{
+    font-size: 2rem;
+}
+.services p{
+    font-size: 18px;
+    margin: 0 10px;
+}
+.card-header i{
+    font-size: 4rem;
+    padding: 2rem;
+    border-radius: 50%;
+}
+.services .card-body p{
+font-size: 16px;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio h2{
+    font-size: 2rem;
+}
+.portfolio p{
+    font-size: 16px;
+    margin: 20px !important;
+}
+.portfolio .col-md-4{
+    margin-top: 20px !important;
+}
+
+
+.card-header img {
+   width: 100%;
+
+}
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+.card-header .overlay h4{
+    font-size: 34px;
+}
+.overlay p{
+    font-size: 16px;
+}
+
+/* About */
+.about h2{
+    font-size: 2rem;
+    text-align: center;
+}
+.about img{
+    width: 250px;
+    height: 300px;
+ margin: 0 auto !important;
+}
+.about p{
+    font-size: 16px;
+    margin: 0 10px !important;
+}
+.about h3{
+    font-size: 24px;
+}
+.about ul li{
+    font-size: 16px;
+}
+  }
+
+/* == responcive   331px 375 px */ 
+  @media screen and (max-width:375px){
+
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar-brand{
+        margin: 5px 10px;
+    font-size: 1.4rem;
+    }
+    .navbar-nav{
+        margin: 0 8rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1.2rem;
+        margin-right: 15px;
+        padding: 8px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+
+.home{
+    height: 35rem;
+}
+
+.col-md-6{
+    margin: 60% auto;
+}
+.titles p{
+    font-size: 1.2rem;
+}
+.titles h3{
+font-size: 1.9rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
+
+/* services */
+
+.services{
+    padding: 30px 0;
+}
+.services h2{
+    font-size: 2rem;
+}
+.services p{
+    font-size: 16px;
+    margin: 0 10px;
+}
+.card-header i{
+    font-size: 3rem;
+    padding: 1.8rem;
+    border-radius: 50%;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio h2{
+    font-size: 2rem;
+}
+.portfolio p{
+    font-size: 16px;
+    margin: 10px !important;
+}
+.portfolio .col-md-4{
+    margin-top: 10px !important;
+}
+.portfolio .overlay h4{
+  font-size: 24px;
+}
+.card-header img {
+ width: 100%;
+
+}
+.portfolio .card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+/* About */
+.about h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about img{
+    width: 250px;
+    height: 300px;
+ margin: 0 auto !important;
+}
+.about p{
+    font-size: 16px;
+    margin: 0 10px !important;
+}
+.about h3{
+    font-size: 24px;
+}
+.about ul li{
+    font-size: 16px;
+}
+
+.my-contact{
+    text-align: left;
+}
+  }
+
+@media (min-width:315px) and (max-width:330px){
+
+    html,body{
+        overflow-x: hidden;
+    }
+   
+    .navbar-brand{
+        margin: 5px 15px;
+    font-size: 1.2rem;
+    }
+    .navbar-nav{
+        margin: 0 7rem auto; 
+     }
+     .nav-item .nav-link{
+        font-size: 1rem;
+        margin-right: 10px;
+        padding: 5px;
+   }
+   .navbar button{
+       border: none;
+   }
+   .navbar button{
+       box-shadow: none;
+       outline: none;
+   }
+.bg-color{
+    background-color: royalblue !important;
+}
+
+/* Home */
+.home{
+    height: 35rem;
+}
+
+.col-md-6{
+    margin: 65% auto;
+}
+.titles p{
+
+    font-size: 1.2rem;
+}
+.titles h3{
+font-size: 1.7rem;
+}
+.button{
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.button a{
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+}
+
+/* services */
+
+.services{
+    padding: 30px 0;
+}
+.services h2{
+    font-size: 30px;
+}
+.services p{
+    font-size: 16px;
+    margin: 0 10px;
+}
+.card-header i{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+}
+
+/* Portfolio */
+
+.portfolio{
+    padding: 3rem 0;
+}
+.portfolio h2{
+    font-size: 2rem;
+}
+
+.portfolio p{
+    margin: 10px !important;
+font-size: 16px;
+}
+.card-header img {
+ width: 100%;
+
+}
+
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+
+}
+.portfolio .overlay h4{
+    font-size: 24px;
+}
+.portfolio .overlay p{
+    font-size: 16px;
+}
+
+/* About */
+.about h2{
+    font-size: 2rem;
+}
+
+.about img{
+    width: 250px;
+    height: 300px;
+ margin: 0 auto !important;
+}
+.about p{
+    font-size: 16px;
+    margin: 0 10px !important;
+}
+
+.my-contact{
+    text-align: left;
+}
+.about h3{
+    font-size: 24px;
+}
+.about ul li{
+    font-size: 16px;
+}
+  }
+
